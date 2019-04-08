@@ -43,19 +43,19 @@ public class BookSeries extends Literature {
      */
     public String listAllBooks() {
         Iterator<Literature> it = booksInSeries.iterator();
-        String literatureList = "";
+        StringBuilder literatureList = new StringBuilder();
 
         while(it.hasNext()) {
             Literature literature = it.next();
-            literatureList += literature.getTitle() + "\n";
+            literatureList.append(literature.getTitle()).append("\n");
         }
-        return literatureList;
+        return literatureList.toString();
     }
 
     /**
      * Use iterator to search though literatureRegister with a parameter.
      * If an exact match is found the object will be removed.
-     * @param objectToBeRemoved remove the book from the book register (ArrayList).
+     * @param objectToBeRemoved remove the book from the bookSeries (ArrayList).
      */
     public void removeBookFromSeries(String objectToBeRemoved) {
         Iterator<Literature> it = booksInSeries.iterator();
