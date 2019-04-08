@@ -1,0 +1,4 @@
+
+Œsquid:S1319"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(¡û±Ðúÿÿÿÿ
+@squid:S1643„"Use a StringBuilder instead.(‡Ä…äýÿÿÿÿ8žà£ú™-
+nsquid:CommentedOutCodeLine9"<This block of commented-out lines of code should be removed.(¾þÚûÿÿÿÿ8Ø¾ô¦›-

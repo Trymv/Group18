@@ -1,48 +1,32 @@
-
 /**
  * This class has the job to hold on a object book.
- * In this class you should be avaible to set book title, genre and author.
+ * In this class you should be available to set book title, genre and author.
  *
  * @author Group 18
  * @version 0.1
  */
-public class Book
-{
+public class Book extends Literature {
     private String genre;
-    private String bookTitle;
-    private String author;
 
     /**
      * Constructor for objects of class Book
-     * 
+     * Will set book title, genre and author.
      */
-    public Book(String bookTitle, String genre, String author) {
-        this.bookTitle = bookTitle;
-        this.genre = genre;
-        this.author = author;
+    public Book(String title, String author, String genre) {
+        super(title, author);
+        if (genre != null) {
+            this.genre = genre;
+        }
+        else {
+            throw new IllegalArgumentException("Book genre was set to null");
+        }
     }
 
     /**
-     * @return the title of the book.
-     */
-    public String getTitle() {
-
-        return this.bookTitle;
-    }
-
-    /**
+     * Return the genre of the book.
      * @return the genre of the book.
      */
     public String getGenre() {
-
         return this.genre;
-    }
-
-    /**
-     * @return the author of the book.
-     */
-    public String getAuthor() {
-
-        return this.author;
     }
 }
